@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/ChooseTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/choose_quiz_title"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- Карточка викторины "Флаги" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flagsMainLayout"
+        android:layout_width="307dp"
+        android:layout_height="158dp"
+        android:layout_below="@id/ChooseTopic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:contentDescription="@string/flags_quiz_desc"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_5" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Карточка викторины "Столицы" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/capitalLayout"
+        android:layout_width="317dp"
+        android:layout_height="154dp"
+        android:layout_below="@id/flagsMainLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="209dp"
+                android:contentDescription="@string/capital_quiz_desc"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_4" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Карточка викторины "Континенты" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/continentsLayout"
+        android:layout_width="324dp"
+        android:layout_height="131dp"
+        android:layout_below="@id/capitalLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="183dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="335dp"
+                android:layout_height="229dp"
+                android:contentDescription="@string/continents_quiz_desc"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_3" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Кнопка старта -->
+    <Button
+        android:id="@+id/startQuizBtn"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/continentsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/round_back_grey10"
+        android:text="@string/start_quiz_button"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:stateListAnimator="@null" />
+</RelativeLayout>

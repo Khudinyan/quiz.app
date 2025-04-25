@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:padding="20dp">
+
+    <!-- Заголовок "Правильные ответы" -->
+    <TextView
+        android:id="@+id/correctAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textColor="#45DB4D"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <!-- Заголовок "Неправильные ответы" -->
+    <TextView
+        android:id="@+id/incorrectAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correctAnswers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#C32828"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <!-- Процентное значение результата -->
+    <TextView
+        android:id="@+id/scorePercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/incorrectAnswers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#F0E15B"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+
+    <!-- Сообщение о результатах -->
+    <TextView
+        android:id="@+id/resultMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scorePercentage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="italic"/>
+
+    <!-- Кнопка для старта новой викторины -->
+    <Button
+        android:id="@+id/startNewQuizBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_back_green20"
+        android:text="Начать новую викторину"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Кнопка для просмотра ответов -->
+    <Button
+        android:id="@+id/viewAnswersBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startNewQuizBtn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_back_gray20"
+        android:text="Посмотреть ответы"
+        android:textColor="#FFFFFF"/>
+</RelativeLayout>

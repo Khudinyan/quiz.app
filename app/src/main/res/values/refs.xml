@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="quiz_button_default" />
+    <drawable name="quiz_button_selected" />
+    <drawable name="quiz_button_correct" />
+</resources>

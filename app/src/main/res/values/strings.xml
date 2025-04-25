@@ -1,0 +1,64 @@
+<resources>
+    <!-- Основные строки приложения -->
+    <string name="app_name">Quiz App</string>
+    <string name="app_title">Quiz Challenge</string>
+    <string name="app_subtitle">Проверь свои знания!</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="start_button_text">НАЧАТЬ</string>
+
+    <!-- Для activity_main.xml -->
+    <string name="choose_quiz_title">Выберите викторину...</string>
+    <string name="flags_quiz_desc">Викторина по флагам стран</string>
+    <string name="capital_quiz_desc">Викторина по столицам стран</string>
+    <string name="start_quiz_button">Начать викторину</string>
+
+    <!-- Для QuizActivity -->
+    <string name="select_option_warning">Пожалуйста, сделайте выбор</string>
+    <string name="time_up">Время вышло!</string>
+    <string name="last_second_warning">Осталась 1 секунда!</string>
+    <string name="exit_confirmation_title">Подтверждение выхода</string>
+    <string name="exit_confirmation_message">Вы действительно хотите выйти из викторины?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="correct_answers">Правильных ответов: %d</string>
+    <string name="incorrect_answers">Неправильных ответов: %d</string>
+
+    <!-- Описания для доступности -->
+    <string name="app_logo_desc">Логотип приложения Quiz</string>
+    <string name="profile_icon_desc">Иконка профиля</string>
+    <string name="back_button_desc">Кнопка назад</string>
+
+    <!-- Остальные строки (можно оставить как есть или заполнить) -->
+    <string name="login_title">Вход</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="login_button">Войти</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="register_title">Регистрация</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="register_button">Зарегистрировать</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="dont_have_account">Нет аккаунта?</string>
+    <string name="already_have_account">Уже есть аккаунт?</string>
+
+    <!-- Удалите или заполните эти строки -->
+    <string name="first_fragment_label">Первый экран</string>
+    <string name="second_fragment_label">Второй экран</string>
+    <string name="next">Далее</string>
+    <string name="previous">Назад</string>
+    <string name="sample_question">Пример вопроса</string>
+    <string name="option_1">Вариант 1</string>
+    <string name="option_2">Вариант 2</string>
+    <string name="option_3">Вариант 3</string>
+    <string name="option_4">Вариант 4</string>
+    <string name="next_button">Далее</string>
+    <string name="selected_topic">Выбранная тема</string>
+    <string name="exit_title">Выход</string>
+    <string name="exit_message">Вы уверены, что хотите выйти?</string>
+    <string name="coming_soon_message" />
+    <string name="continents_quiz_desc">\n</string>
+</resources>

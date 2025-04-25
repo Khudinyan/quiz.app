@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+
+    <!-- Логотип приложения -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img_2"
+        android:contentDescription="Логотип приложения quiz"
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Challenge"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
+
+    <!-- Подзаголовок -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Проверь свои знания!"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText"/>
+
+    <!-- Кнопка старта -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Loading"
+        android:textAllCaps="false"
+        android:textColor="#AB5757"
+        android:textSize="20sp"
+        android:background="@drawable/btn_rounded_accent"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <!-- Версия приложения -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.0.0"
+        android:textColor="#B3FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

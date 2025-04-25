@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/img_8"
+    tools:context=".QuizActivity"
+    tools:ignore="ExtraText">
+
+    <!-- Question Counter -->
+    <TextView
+        android:id="@+id/questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/10"
+        android:textSize="18sp"
+        android:textColor="#1F6BB8"/>
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="What is the capital of France?"
+        android:textSize="20sp"
+        android:textColor="#EDEDED"/>
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="01:00"
+        android:textSize="18sp"
+        android:textColor="#3895E0"/>
+
+    <!-- Answer Options -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:text="Option 1"
+        android:textColor="#1F6BB8"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:text="Option 2"
+        android:textColor="#1F6BB8"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:text="Option 3"
+        android:textColor="#1F6BB8"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:text="Option 4"
+        android:textColor="#1F6BB8"/>
+
+    <!-- Navigation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_back_blue10"
+            android:text="Назад"
+            android:textColor="#FFFFFF"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/round_back_blue10"
+            android:text="Далее"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</LinearLayout>

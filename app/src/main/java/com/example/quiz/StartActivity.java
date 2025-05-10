@@ -11,17 +11,17 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_start); // ВАЖНО!!!
+        setContentView(R.layout.activity_start); // Оставляем заставку
 
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, MainActivity.class));
+            // Переход на экран ввода имени
+            startActivity(new Intent(this, NameInputActivity.class));
             finish();
-        }, 1000); // Задержка 1 сек
+        }, 1000); // 1 секунда
     }
 
     @Override
     public void onBackPressed() {
-        // Блокируем назад
+        // Отключаем кнопку "Назад" на заставке
     }
 }

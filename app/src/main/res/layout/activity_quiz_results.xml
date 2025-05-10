@@ -1,75 +1,126 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img"
-    android:padding="20dp">
+    android:padding="24dp">
 
-    <!-- Заголовок "Правильные ответы" -->
+    <!-- 🔹 Имя игрока -->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Игрок: "
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔹 Правильные ответы -->
     <TextView
         android:id="@+id/correctAnswers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:textColor="#45DB4D"
+        android:text="Правильные: 8"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textColor="#45DB4D"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Заголовок "Неправильные ответы" -->
+    <!-- 🔹 Неправильные ответы -->
     <TextView
         android:id="@+id/incorrectAnswers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/correctAnswers"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="#C32828"
+        android:text="Неправильные: 2"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textColor="#C32828"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/correctAnswers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Процентное значение результата -->
+    <!-- 🔹 Процент -->
     <TextView
         android:id="@+id/scorePercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/incorrectAnswers"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:text="80%"
+        android:textSize="32sp"
+        android:textStyle="bold"
         android:textColor="#F0E15B"
-        android:textSize="28sp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/incorrectAnswers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Сообщение о результатах -->
+    <!-- 🔹 Сообщение -->
     <TextView
         android:id="@+id/resultMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/scorePercentage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:text="Отличный результат!"
+        android:textSize="24sp"
+        android:textStyle="italic"
         android:textColor="#FFFFFF"
-        android:textSize="26sp"
-        android:textStyle="italic"/>
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/scorePercentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Кнопка для старта новой викторины -->
+    <!-- 🔹 Кнопка: Новая викторина -->
     <Button
         android:id="@+id/startNewQuizBtn"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
-        android:background="@drawable/round_back_green20"
         android:text="Начать новую викторину"
-        android:textColor="#FFFFFF"/>
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/round_back_green20"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/resultMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Кнопка для просмотра ответов -->
+    <!-- 🔹 Кнопка: Посмотреть таблицу лидеров -->
+    <Button
+        android:id="@+id/viewLeaderboardBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Посмотреть таблицу лидеров"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/round_back_green20"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/startNewQuizBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔹 Кнопка: Посмотреть ответы -->
     <Button
         android:id="@+id/viewAnswersBtn"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/startNewQuizBtn"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_back_gray20"
         android:text="Посмотреть ответы"
-        android:textColor="#FFFFFF"/>
-</RelativeLayout>
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/round_back_gray20"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/viewLeaderboardBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

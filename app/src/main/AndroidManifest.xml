@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.quiz">
 
-
     <!-- Permissions -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,7 +19,7 @@
         android:theme="@style/Theme.Quiz"
         tools:targetApi="31">
 
-        <!-- Стартовая активность -->
+        <!-- 🔹 Стартовая активность (запускается первой) -->
         <activity
             android:name=".StartActivity"
             android:exported="true">
@@ -30,31 +29,51 @@
             </intent-filter>
         </activity>
 
+        <!-- 🔹 Активность ввода имени (перед викториной) -->
+        <activity
+            android:name=".NameInputActivity"
+            android:exported="true" />
 
-
-
-        <!-- Главное меню -->
+        <!-- 🔹 Активность выбора темы викторины -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- Игра (Quiz) -->
+        <!-- 🔹 Активность выбора уровня сложности викторины -->
+        <activity
+            android:name=".DifficultySelectionActivity"
+            android:exported="true" />
+
+        <!-- 🔹 Викторина -->
         <activity
             android:name=".QuizActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan" />
+            android:exported="true" />
 
-        <!-- Результаты -->
+        <!-- 🔹 Результаты викторины -->
         <activity
             android:name=".QuizResults"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan" />
+            android:exported="true" />
 
-        <!-- Меню (если нужно отдельное) -->
+        <!-- 🔹 Меню -->
         <activity
             android:name=".MenuActivity"
             android:exported="true"
             android:launchMode="singleTop" />
+
+        <!-- 🔹 Активность с правильными ответами -->
+        <activity
+            android:name=".CorrectAnswersActivity"
+            android:exported="true" />
+
+        <!-- 🔹 Экран с просмотром правильных и выбранных ответов -->
+        <activity
+            android:name=".AnswersReviewActivity"
+            android:exported="true" />
+
+        <!-- 🔹 Таблица лидеров -->
+        <activity
+            android:name=".LeaderboardActivity"
+            android:exported="true" />
 
     </application>
 </manifest>

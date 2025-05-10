@@ -4,9 +4,10 @@ public class QuestionsList {
 
     private String option1, option2, option3, option4, question, answer;
     private String userSelectedAnswer;
+    private String explanation;
     private int imageResource = -1; // по умолчанию -1, если картинки нет
 
-    // 🔹 Конструктор без картинки (старый)
+    // 🔹 Конструктор без картинки
     public QuestionsList(String question, String option1, String option2, String option3,
                          String option4, String answer, String userSelectedAnswer) {
         this.question = question;
@@ -54,11 +55,20 @@ public class QuestionsList {
         return userSelectedAnswer;
     }
 
+    public String getExplanation() {
+        return explanation;
+    }
+
     public void setUserSelectedAnswer(String userSelectedAnswer) {
         this.userSelectedAnswer = userSelectedAnswer;
     }
 
     public int getImageResource() {
         return imageResource;
+    }
+
+    // 🔹 Метод для проверки наличия изображения
+    public boolean hasImage() {
+        return imageResource != -1; // Если imageResource не равен -1, значит, изображение есть
     }
 }

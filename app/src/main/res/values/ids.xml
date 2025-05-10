@@ -45,4 +45,16 @@
     <item name="startNewQuizBtn" type="id" />
     <item name="correctAnswers" type="id" />
     <item name="incorrectAnswers" type="id" />
+    <item name="nameInput" type="id" />
+    <item name="submitButton" type="id" />
+    <item name="questionTextView" type="id" />
+    <item name="flagImageView" type="id" />
+    <item name="continueBtn" type="id" />
+    <item name="nameEditText" type="id" />
+    <item name="userAnswerText" type="id" />
+    <item name="correctAnswerText" type="id" />
+    <item name="answersRecyclerView" type="id" />
+    <item name="imageView" type="id" />
+    <item name="leaderboardText" type="id" />
+    <item name="userName" type="id" />
 </resources>

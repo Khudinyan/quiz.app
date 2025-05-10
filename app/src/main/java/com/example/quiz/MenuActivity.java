@@ -13,7 +13,8 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // БЫЛО: activity_start ❌ / СТАЛО: activity_menu ✅
+        setContentView(R.layout.activity_main); // Убедись, что layout используется правильно
+
         initializeViews();
     }
 

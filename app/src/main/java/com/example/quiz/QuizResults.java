@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.SharedPreferences;
+
 
 public class QuizResults extends AppCompatActivity {
 
     private TextView correctText, incorrectText, scoreText, messageText;
-    private Button newQuizBtn, reviewBtn;
+    private Button newQuizBtn, reviewBtn, leaderboardBtn; // ✅ добавлена новая кнопка
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class QuizResults extends AppCompatActivity {
         messageText = findViewById(R.id.resultMessage);
         newQuizBtn = findViewById(R.id.startNewQuizBtn);
         reviewBtn = findViewById(R.id.viewAnswersBtn);
+        leaderboardBtn = findViewById(R.id.viewLeaderboardBtn); // ✅ инициализация новой кнопки
     }
 
     private void displayResults() {
@@ -53,6 +56,13 @@ public class QuizResults extends AppCompatActivity {
             message = "Keep trying!";
         }
         messageText.setText(message);
+
+        SharedPreferences prefs = getSharedPreferences("quiz_prefs", MODE_PRIVATE);
+        String username = prefs.getString("username", ""); // имя по умолчанию — пустое
+
+        TextView nameTextView = findViewById(R.id.userName);
+        nameTextView.setText("Игрок: " + username);
+
     }
 
     private void setupListeners() {
@@ -67,6 +77,11 @@ public class QuizResults extends AppCompatActivity {
             Intent intent = new Intent(QuizResults.this, ReviewAnswersActivity.class);
             startActivity(intent);
         });
+
+        leaderboardBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(QuizResults.this, LeaderboardActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
@@ -76,4 +91,5 @@ public class QuizResults extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

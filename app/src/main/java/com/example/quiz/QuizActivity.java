@@ -32,18 +32,36 @@ public class QuizActivity extends AppCompatActivity {
     private int currentQuestionPosition = 0;
     private String selectedOptionByUser = "";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        // Initialize views (buttons, text views, etc.)
         initViews();
+
+        // Check if there's any saved instance state to restore
+        if (savedInstanceState != null) {
+            // Restore saved state (like current question position)
+            currentQuestionPosition = savedInstanceState.getInt("currentQuestionPosition", 0);
+        }
+
+        // Load questions, this should include handling the selected topic and difficulty
         loadQuestions();
+        String selectedTopic = getIntent().getStringExtra("selectedTopic");
+        String selectedDifficulty = getIntent().getStringExtra("selectedDifficulty");
+
+        // Show the current question to the user
         showCurrentQuestion();
+
+        // Set up listeners for options and buttons
         setupOptionClickListeners();
         setupNextButtonListener();
         setupBackButtonListener();
     }
+
 
     private void initViews() {
         final TextView timer = findViewById(R.id.timer);
@@ -115,8 +133,23 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void loadQuestions() {
+        // Get the selected topic from the intent
         String getSelectedTopic = getIntent().getStringExtra("selectedTopic");
-        questionsList = QuestionsBank.getQuestions(getSelectedTopic);
+
+        // Assuming you have a method to get the selected difficulty
+        String selectedDifficulty = getSelectedDifficulty();  // Replace this with your actual method to get the difficulty level
+
+        // Now pass both selected topic and difficulty to getQuestions()
+        questionsList = QuestionsBank.getQuestions(getSelectedTopic, selectedDifficulty);
+        String selectedTopic = "";
+        Toast.makeText(this, "Topic: " + selectedTopic + ", Level: " + selectedDifficulty +
+                ", Questions loaded: " + questionsList.size(), Toast.LENGTH_LONG).show();
+
+
+    }
+
+    private String getSelectedDifficulty() {
+        return null;
     }
 
     private void showCurrentQuestion() {
